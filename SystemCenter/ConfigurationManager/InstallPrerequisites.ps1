@@ -180,7 +180,11 @@ Roles available:
 18.System Health Validator point : HEALTHVALIDATOR
 19.Windows Intune connector : INTUNE")] 
     [string[]] 
-    $SCCMRoles
+    $SCCMRoles, 
+  
+    [Parameter(Mandatory=$TRUE, Position=1, HelpMessage="Target Server that will have SCCM Roles Installed")] 
+    [string] 
+    $SCCMTargetServer
 )
 
 $ValidRoles = "SITE", "DATABASE", "SMS", "WEBSERVICE", "WEBSITE", "ASSETINTELLIGENCE", "CERTIFICATE", "DISTRIBUTION", "ENDPOINTPROTECTION", "ENROLLMENT", "ENROLLMENTPROXY", "FALLBACK", "MANAGEMENT", "OUTOFBAND", "REPORTING", "SOFTWAREUPDATE", "STATEMIGRATION", "HEALTHVALIDATOR", "INTUNE"
@@ -194,7 +198,7 @@ foreach($Role in $SCCMRoles){
 }
 
 #Test to Make Sure this Script is being run on Server 2012 R2, since it doesn't take in to consideration other OS requirements. If not 2012 R2 abort.
-if(!(Get-WmiObject -class Win32_OperatingSystem).Caption.ToString().StartsWith("Microsoft Windows Server 2012 R2")){
+if(!(invoke-command -computername $SCCMTargetServer {(Get-WmiObject -class Win32_OperatingSystem).Caption.ToString().StartsWith("Microsoft Windows Server 2012 R2")})){
     "This Script should only be run on Microsoft Windows Server 2012 R2, and as not been designed for other operating systems. Aborting..."
     return
 }
@@ -338,19 +342,20 @@ if(($SCCMRoles -contains "REPORTING")){
 "The Following Command is about to be run:"
 "Install-WindowsFeature –Name " + ($SCCMPreRequisites -join ", ")
 
-while(true){
+#while true doesn't appear to work, so heres the equivlent.
+while((1 -eq 1)){ 
     "Would you like to include Management Tools?"
     $Answer = Read-Host "Yes/No/Abort"
     if($Answer -contains "yes"){
           "Initializing install with Managment Tools"
           "Initializing install with Managment Tools"  >> ($PSScriptRoot + "\installLog.txt")
-          Install-WindowsFeature –Name $SCCMPreRequisites -IncludeManagementTools
+          Install-WindowsFeature –Name $SCCMPreRequisites -ComputerName $SCCMTargetServer -IncludeManagementTools
           break
     }
     if($Answer -contains "no"){
           "Initializing install without Managment Tools"
           "Initializing install without Managment Tools"  >> ($PSScriptRoot + "\installLog.txt")
-          Install-WindowsFeature –Name $SCCMPreRequisites
+          Install-WindowsFeature –Name $SCCMPreRequisites -ComputerName $SCCMTargetServer
           break
     }
     if($Answer -contains "abort"){
