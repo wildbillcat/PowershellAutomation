@@ -192,9 +192,21 @@ $ValidRoles = "SITE", "DATABASE", "SMS", "WEBSERVICE", "WEBSITE", "ASSETINTELLIG
 #Test to make sure only valid roles were requested
 foreach($Role in $SCCMRoles){
     if(!($ValidRoles -contains $Role)){
-        $Role + " is an invalid SCCM Role"
-        return
+        if(!("StandAloneServer" -eq $Role)){
+            $Role + " is an invalid SCCM Role"
+            return
+        }
+        #Test for Standard Config
+        $SCCMRoles += "SITE"
+        $SCCMRoles += "DATABASE"
+        $SCCMRoles += "DISTRIBUTION"
+        $SCCMRoles += "MANAGEMENT"
+        $SCCMRoles += "STATEMIGRATION"
+        $SCCMRoles += "ENROLLMENT"
+        $SCCMRoles += "OUTOFBAND"
+        $SCCMRoles += "REPORTING"
     }
+    
 }
 
 #Test to Make Sure this Script is being run on Server 2012 R2, since it doesn't take in to consideration other OS requirements. If not 2012 R2 abort.
