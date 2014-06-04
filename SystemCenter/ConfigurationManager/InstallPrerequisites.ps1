@@ -205,6 +205,8 @@ foreach($Role in $SCCMRoles){
         $SCCMRoles += "ENROLLMENT"
         $SCCMRoles += "OUTOFBAND"
         $SCCMRoles += "REPORTING"
+        $SCCMRoles += "WEBSERVICE"
+        $SCCMRoles += "WEBSITE"
     }
     
 }
