@@ -11,6 +11,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-01.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-02"
    {
@@ -22,6 +31,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-02.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-03"
    {
@@ -33,6 +51,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-03.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-04"
    {
@@ -44,6 +71,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-04.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-05"
    {
@@ -55,6 +91,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-05.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-06"
    {
@@ -66,6 +111,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-06.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-07"
    {
@@ -77,6 +131,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-07.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-08"
    {
@@ -88,6 +151,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-08.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-09"
    {
@@ -99,6 +171,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-09.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-10"
    {
@@ -110,6 +191,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-11.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-11"
    {
@@ -121,6 +211,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-11.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-12"
    {
@@ -132,6 +231,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-12.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-13"
    {
@@ -143,6 +251,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-13.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-14"
    {
@@ -154,6 +271,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-14.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-15"
    {
@@ -165,6 +291,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-15.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-16"
    {
@@ -176,6 +311,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-16.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-17"
    {
@@ -187,6 +331,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-17.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-18"
    {
@@ -198,6 +351,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-18.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-19"
    {
@@ -209,6 +371,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-19.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-20"
    {
@@ -220,6 +391,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-20.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-21"
    {
@@ -231,6 +411,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-21.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-22"
    {
@@ -242,6 +431,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-22.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-23"
    {
@@ -253,6 +451,15 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-23.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
    Node "ARCH-SIGNAGE-24"
    {
@@ -264,5 +471,14 @@
          SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-24.config" # This is a path of the Updated Config File
          DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
+
+      Script RestartAfterReconfigure
+        {
+            SetScript = { 
+                shutdown -t 0 -r
+            }
+        TestScript = { Test-Path "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" }
+        DependsOn = "[File]XiboConfigurationFile"  # This ensures that Xibo is relaunched
+        }
    }
 } 
