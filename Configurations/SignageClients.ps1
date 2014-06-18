@@ -1,28 +1,268 @@
 ﻿Configuration SignageClients
 {
-   # A Configuration block can have zero or more Node blocks
-   Node "Server001"
+   # This Configuration block contains a configuration Node for each Signage Client
+   Node "ARCH-SIGNAGE-01"
    {
-      # Next, specify one or more resource blocks
-
-      # WindowsFeature is one of the built-in resources you can use in a Node block
-      # This example ensures the Web Server (IIS) role is installed
-      WindowsFeature MyRoleExample
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
       {
-          Ensure = "Present" # To uninstall the role, set Ensure to "Absent"
-          Name = "Web-Server"  
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-01.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
-
-      # File is a built-in resource you can use to manage files and directories
-      # This example ensures files from the source directory are present in the destination directory
-      File MyFileExample
+   }
+   Node "ARCH-SIGNAGE-02"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
       {
-         Ensure = "Present"  # You can also set Ensure to "Absent"
-         Type = "Directory“ # Default is “File”
-         Recurse = $true
-         SourcePath = $WebsiteFilePath # This is a path that has web files
-         DestinationPath = "C:\inetpub\wwwroot" # The path where we want to ensure the web files are present
-         DependsOn = "[WindowsFeature]MyRoleExample"  # This ensures that MyRoleExample completes successfully before this block runs
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-02.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-03"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-03.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-04"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-04.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-05"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-05.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-06"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-06.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-07"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-07.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-08"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-08.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-09"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-09.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-10"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-11.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-11"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-11.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-12"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-12.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-13"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-13.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-14"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-14.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-15"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-15.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-16"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-16.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-17"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-17.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-18"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-18.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-19"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-19.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-20"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-20.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-21"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-21.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-22"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-22.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-23"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-23.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
+      }
+   }
+   Node "ARCH-SIGNAGE-24"
+   {
+      # This Copys the Config File over to the Machine
+      File XiboConfigurationFile
+      {
+         Checksum = "ModifiedDate" #Ensure Config File is Latest Revision
+         Ensure = "Present"  # Ensure Config File Exists"
+         SourcePath = "\\arch-cfgmgr\PowershellDCSResources\Signage\ARCH-SIGNAGE-24.config" # This is a path of the Updated Config File
+         DestinationPath = "C:\Program Files (x86)\Xibo Player\XiboClient.exe.config" # The path where the config file should be installed
       }
    }
 } 
