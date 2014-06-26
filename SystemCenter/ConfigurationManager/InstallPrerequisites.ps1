@@ -1,6 +1,7 @@
 ﻿<#  
 .Synopsis  
-    Prepares a computer for Chosen roles of System Center 2012 R2 
+    Prepares a computer for Chosen roles of System Center 2012 R2. 
+    Really needs to be replaced with a DCS. 
      
 .Description  
     This script configures the operating system on the virtual machine to support System Center Configuration Manager 2012R2.
