@@ -1,0 +1,1 @@
+﻿$root = "\\kerrigan\administrative shares$\Applications\Server Software\RepRancher\ConfigFiles\"; Get-ChildItem $root | ForEach-Object { $folder = $_; $folder.EnumerateFiles() | ForEach-Object { $path = "\\" + $folder.Name + "\c$\Program Files (x86)\RepRancher\"; $file = $root + $folder.Name + "\" + $_.Name; Copy-Item -Path $file -Destination $path }; "Copy: " + $folder.Name }

@@ -1,0 +1,2 @@
+This is an old implementation that should be retired. 
+Moreover, with PowerShell 4.0 DCS would be the appropriate means of accomplishing what these used to do.

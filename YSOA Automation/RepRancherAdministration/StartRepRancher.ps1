@@ -1,0 +1,1 @@
+﻿invoke-command -computername arch-makerbot-0, arch-makerbot-1, arch-makerbot-2, arch-makerbot-3, arch-makerbot-4, arch-makerbot-5, arch-makerbot-6, arch-makerbot-7, arch-makerbot-8, arch-makerbot-9, arch-makerbot10, arch-makerbot11, arch-makerbot12, arch-makerbot13, arch-makerbot14 {net start "RepRancher Service"}
