@@ -1,1 +1,0 @@
-﻿Get-ADComputer -SearchBase 'OU=SOA 6th Floor Studio Workstations,OU=Lab Computers,OU=Architecture,DC=yu,DC=yale,DC=edu' -Filter '*' | select -ExpandProperty name
