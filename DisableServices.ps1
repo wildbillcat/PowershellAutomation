@@ -1,0 +1,1 @@
+﻿Get-Service BBDemon,'Bonjour Service',hasplms,TeamViewer9 | Stop-Service -PassThru | Set-Service -StartupType disabled
