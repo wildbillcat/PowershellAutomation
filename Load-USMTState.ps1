@@ -9,7 +9,7 @@
 .EXAMPLE
    .\Load-USMTState.ps1 -MachineName Arch-PC-623 -USMTStorePath \\fileserver\usmtshare\arch-pc-623\ -USMTDecryptionKey key
 .LINK
-    mailto:patrick.mcmorran@yale.edu
+    mailto:kingrolloinc@sbcglobal.net
 #>
 
 param(

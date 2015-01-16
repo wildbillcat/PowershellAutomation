@@ -11,7 +11,7 @@
 .EXAMPLE
    .\ContactGenerator.ps1 
 .LINK
-    mailto:patrick.mcmorran@yale.edu
+    mailto:kingrolloinc@sbcglobal.net
 #>
 function Add-Contact {
     param ($user)
