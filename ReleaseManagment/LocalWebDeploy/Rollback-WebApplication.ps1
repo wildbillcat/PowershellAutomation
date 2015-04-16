@@ -26,8 +26,9 @@
 #    [string]$RMBackupPath   #This path is set as a server level configuration variable that defines where release managment stores deployment backups. 
 #)
 
-$localBackupDir = "$env:TEMP\$ReleaseId\$BuildDefinition"
-$remoteBackupDir = "$RMBackupPath\$ReleaseId\$BuildDefinition"
+#Parse parameters and prepare to run script. Validate Values
+$localdeploymentBackupPath = "$env:TEMP\$ReleaseId\$Stage\$BuildDefinition" 
+$remotedeploymentBackupPath = "$RMBackupPath\$ReleaseId\$Stage\$BuildDefinition\$env:COMPUTERNAME" 
 
 #Parse parameters and prepare to run script. Validate Values
 $localdeploymentBackupPath = "$localBackupDir\$Stage" 

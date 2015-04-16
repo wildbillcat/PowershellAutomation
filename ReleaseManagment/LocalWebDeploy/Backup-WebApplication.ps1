@@ -23,16 +23,13 @@
 #								#being deployed. This is important if a release template deploys multiple web deploy components 
 #								#(packages) to the same server 
 #	[Parameter(Mandatory=$false)] 
-#    [string]$localBackupDir = $env:TEMP,
-
-#	[Parameter(Mandatory=$false)] 
 #    [string]$RMBackupPath		#This path is set as a server level configuration variable that defines where release managment stores deployment backups. 
 #)
 
 
 #Parse parameters and prepare to run script. Validate Values
-$localdeploymentBackupPath = "$localBackupDir\$Stage" 
-$remotedeploymentBackupPath = "$RMBackupPath\$Stage\$env:COMPUTERNAME" 
+$localdeploymentBackupPath = "$env:TEMP\$ReleaseId\$Stage\$BuildDefinition" 
+$remotedeploymentBackupPath = "$RMBackupPath\$ReleaseId\$Stage\$BuildDefinition\$env:COMPUTERNAME" 
 
 Add-PSSnapin WDeploySnapin3.0
 
@@ -75,10 +72,11 @@ If(!(Test-Path "$ApplicationXMLPath")){
 #Get Application List
 $oXMLRoot = $oXMLDocument.Applications
 #Add Application
-[System.XML.XMLElement]$oXMLApplication = $oXMLRoot.appendChild($oXMLDocument.CreateElement($IISApplicationName))
+[System.XML.XMLElement]$oXMLApplication = $oXMLRoot.appendChild($oXMLDocument.CreateElement("Application"))
 #Add Application Path
-$oXMLApplication.Value = "$BackupPackageName"
-$oXMLDocument.Save("$ApplicationXMLPath")
+$oXMLApplication.SetAttribute("Name", "$IISApplicationName")
+$oXMLApplication.SetAttribute("Package", "$BackupPackageName")
+Set-Content -Value $oXMLDocument -Path $ApplicationXMLPath
 
 Copy-Item -Force -Path $BackupPackage -Destination "$localdeploymentBackupPath\$BackupPackageName"
 
