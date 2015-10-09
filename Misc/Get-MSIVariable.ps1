@@ -14,19 +14,25 @@ Param(
 )
 
 $Installer = New-Object -ComObject WindowsInstaller.Installer
-try{
-    $Database = $Installer.OpenDatabase($Path, 0)
-}
-catch{
-}
 
-$View = $Database.OpenView("Select * From Property")
-$View.Execute()
+$Database = $Installer.GetType().InvokeMember(
+            "OpenDatabase", "InvokeMethod", $Null, 
+            $Installer, @($Path, 0)
+        )
+
+$View = $Database.GetType().InvokeMember(
+            "OpenView", "InvokeMethod", $Null, $Database, ("Select * From Property")
+        )
+
+$View.GetType().InvokeMember("Execute", "InvokeMethod", $Null, $View, $Null)
+
 "Property Rows Found:"
 ""
 while($true){
     $Record = $null
-    $Record = $View.Fetch()
+    $Record = $View.GetType().InvokeMember(
+            "Fetch", "InvokeMethod", $Null, $View, $Null
+        )
     if($Record -eq $null){
         break
     }
